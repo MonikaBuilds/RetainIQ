@@ -21,51 +21,71 @@ At Meridian Trust Bank, answering that question alone wastes retention budgets:
 * **73% of churners are Mass Market**, but they took just **19%** of the churned money.
 * The **top balance quintile is only 7% of churners, but holds 56% of leaving balances**.
 
-Spending retention spend purely on churn risk protects **headcount rather than deposits**.  
+Spending retention budget purely on churn risk protects **headcount rather than deposits**.  
 **RetainIQ changes the question to: "Who is worth saving?"**
 
 RetainIQ combines calibrated machine learning probabilities with customer deposit balances to calculate **Balance at Risk** and **Net Retention Value**, routing every customer into actionable operational tiers.
 
 ---
 
-## 🔄 Project Workflow (Short & Simple)
+## 🔄 Project Workflow
 
-The end-to-end workflow transforms raw bank data into prioritized retention interventions:
+The end-to-end system follows a structured, vertically aligned workflow that transforms raw, messy bank extracts into high-impact retention decisions:
 
 ```mermaid
-flowchart LR
-    A["1. Ingest & Clean<br/>(10,000 accounts, strip junk rows & text nums)"] --> B["2. Predict Churn Risk<br/>(Calibrated ML: Hold-out ROC-AUC 0.821)"]
-    B --> C["3. Prioritise by Value<br/>(Balance at Risk = Risk x Balance)"]
-    C --> D["4. WorthSaving Matrix<br/>(P1 Save Now, P2 Nurture, P3 Digital, P4 Monitor)"]
-    D --> E["5. Action & Dashboard<br/>(Streamlit UI, Top-200 calls, 120d RCT Pilot)"]
+flowchart TD
+    Step1["<b>1. Ingestion & Sanitization</b><br/>• Ingests 10,020 raw lines and extracts 10,000 clean customer accounts.<br/>• Removes junk headers and 18 summary rows (preventing 342M phantom balance).<br/>• Converts 9,895 text numbers with commas into numeric datatypes.<br/>• Identifies logic anomalies (product mismatches, tenure flags) without dropping records."]
+    --> Step2["<b>2. Predictive Churn Modeling</b><br/>• Trains an L2-regularized classifier with 5-fold Platt Sigmoid calibration.<br/>• Verified Hold-out ROC-AUC of <b>0.821</b> and PR-AUC of <b>0.499</b> (vs. 0.158 baseline).<br/>• <b>Data Leakage Audited</b>: Excludes inactivity days so the bank acts <i>before</i> accounts go quiet.<br/>• Generates top 3 plain-English reason codes per account from log-odds contributions."]
+    --> Step3["<b>3. Economic Prioritisation Engine</b><br/>• Prioritises active customers by financial exposure rather than probability alone:<br/>   <b>Balance at Risk</b> = P(churn) × Average Monthly Balance<br/>• Computes <b>Net Retention Value</b> based on 3-year horizon, 2.5% Net Interest Margin, and 20% save rate."]
+    --> Step4["<b>4. The WorthSaving 2×2 Matrix</b><br/>• <b>P1 Save Now</b> (High Risk, High Value) → Relationship Manager outreach in 5 days + custom offer<br/>• <b>P2 Nurture & Deepen</b> (Low Risk, High Value) → Loyalty perks & second-product cross-sell<br/>• <b>P3 Low-Cost Automation</b> (High Risk, Low Value) → In-app automated digital re-engagement<br/>• <b>P4 Monitor</b> (Low Risk, Low Value) → Passive monitoring with $0 marketing spend"]
+    --> Step5["<b>5. Operations & Executive Delivery</b><br/>• Interactive Streamlit Executive Dashboard (6 tabs with dynamic scenario modeling).<br/>• Top-200 RM priority call roster capturing <b>26% of all active balance at risk</b>.<br/>• Pre-registered 120-Day Stratified A/B RCT Pilot design (2,106 customers, 5.5 pp MDE)."]
 
-    style A fill:#f1f5f9,stroke:#64748b,stroke-width:1.5px
-    style B fill:#eff6ff,stroke:#3b82f6,stroke-width:1.5px
-    style C fill:#f0fdf4,stroke:#22c55e,stroke-width:1.5px
-    style D fill:#fefce8,stroke:#eab308,stroke-width:1.5px
-    style E fill:#faf5ff,stroke:#a855f7,stroke-width:1.5px
+    style Step1 fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style Step2 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
+    style Step3 fill:#f0fdf4,stroke:#22c55e,stroke-width:2px
+    style Step4 fill:#fefce8,stroke:#eab308,stroke-width:2px
+    style Step5 fill:#faf5ff,stroke:#a855f7,stroke-width:2px
 ```
-
-1. **Ingest & Clean**: Sanitizes raw extracts, handles text numbers, and repairs structural defects.
-2. **Predict Churn Risk**: Scores customers using a leakage-tested, calibrated classification model.
-3. **Prioritise by Value**: Ranks accounts by financial exposure rather than probability alone.
-4. **WorthSaving Matrix**: Segregates customers into 4 distinct economic treatment tiers.
-5. **Action & Dashboard**: Delivers insights via an interactive Streamlit app, actionable call lists, and an A/B RCT pilot design.
 
 ---
 
-## 🖥️ Interactive Dashboard Walkthrough
+## 🖥️ Interactive Dashboard Showcase
 
-Launch the dashboard locally via `streamlit run app/retainiq_app.py` to explore the 6 interactive modules:
+The RetainIQ dashboard (`app/retainiq_app.py`) provides an executive interface with dynamic scenario modeling. Below is a walkthrough of each of the 6 modules:
 
-| Tab | View & Focus | Screenshot |
-|:---:|---|---|
-| **1. Overview** | **KPIs & Core Thesis**: High-level churn volume vs. balance loss, quintile distribution, and parameter sliders. | ![Overview](outputs/dashboard_screenshots/overview.png) |
-| **2. See** | **Churn Drivers & Signals**: Dose-response complaints curve ($z=12.5$), single vs. multi-product drop, and RM analysis. | ![See](outputs/dashboard_screenshots/see.png) |
-| **3. Predict** | **Validation & Leakage**: Holdout curves, three-way leakage ablation test, Platt calibration, and demographic fairness audits. | ![Predict](outputs/dashboard_screenshots/predict.png) |
-| **4. Prioritise** | **WorthSaving Matrix**: 2×2 tier allocation, budget simulator, dynamic gain curves, and per-customer reason cards. | ![Prioritise](outputs/dashboard_screenshots/prioritise.png) |
-| **5. Act** | **Playbook & RCT Pilot**: 6 evidence-based plays mapped to churn drivers, and pre-registered 120-day A/B pilot sizing. | ![Act](outputs/dashboard_screenshots/act.png) |
-| **6. Score a File** | **Batch Scoring Engine**: Upload raw CSV files (even corrupted extracts) for real-time cleaning, scoring, and CSV export. | ![Score](outputs/dashboard_screenshots/score.png) |
+### 1. Executive Overview & Business Thesis
+![Executive Overview Dashboard](outputs/dashboard_screenshots/overview.png)
+*Provides headline KPIs, the volume vs. value paradox, deposit quintile distributions, and interactive sensitivity sliders (Net Interest Margin, Save Rate, Contact Costs) to re-evaluate portfolio economics on the fly.*
+
+---
+
+### 2. Churn Discovery & Behavioral Evidence ("See")
+![Churn Drivers Dashboard](outputs/dashboard_screenshots/see.png)
+*Explores statistical churn drivers with 95% confidence intervals, including the dose-response complaints curve ($z=12.5$), single vs. multi-product churn gap (36.1% vs. 8.8%), and Relationship Manager confounding analysis.*
+
+---
+
+### 3. Model Prediction, Calibration & Fairness ("Predict")
+![Model Validation Dashboard](outputs/dashboard_screenshots/predict.png)
+*Displays holdout ROC/PR curves (AUC: 0.821), the 3-way data leakage experiment, Platt reliability curve (Brier score: 0.104), and demographic fairness audits demonstrating zero disparate impact across gender and region.*
+
+---
+
+### 4. Prioritisation Engine & The WorthSaving Matrix ("Prioritise")
+![Prioritisation Dashboard](outputs/dashboard_screenshots/prioritise.png)
+*Allocates all 8,422 active customers across the 2×2 WorthSaving matrix (P1–P4), features an interactive contact budget simulator, cumulative gain curves, and customer drill-down cards with top 3 plain-English reason codes.*
+
+---
+
+### 5. Operational Playbook & 120-Day RCT Pilot ("Act")
+![Playbook and Pilot Dashboard](outputs/dashboard_screenshots/act.png)
+*Maps 6 evidence-based interventions to specific churn drivers with unit costs, alongside sample size calculations and statistical power curves for the pre-registered 120-day A/B pilot (2,106 customers, 5.5 pp MDE).*
+
+---
+
+### 6. Batch Scoring Engine ("Score a File")
+![Batch Scoring Dashboard](outputs/dashboard_screenshots/score.png)
+*Enables bank analysts to upload raw or corrupted CSV files for automated sanitization and instant batch scoring, generating downloadable ranked customer rosters with recommended actions and reason codes.*
 
 ---
 
