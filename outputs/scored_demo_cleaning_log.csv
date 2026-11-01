@@ -1,0 +1,37 @@
+issue,detection_rule,rows_affected,action,rationale,risk
+Junk rows above header,rows before first row containing 'customer_id',1,dropped,"title text, not data",none
+Columns outside data dictionary,column name not in data dictionary,1,dropped ['aging'],'Aging' duplicates tenure_years (rebuilt from tenure); empty trailing column has no data,none - tenure band recomputed
+Non-customer rows (pasted summary/pivot tables),customer_id not matching ^CUST[0-9]+$,2,dropped,"they are report totals, not customers; would corrupt numeric columns",none
+Unparseable value in 'avg_monthly_balance',text that cannot be read as a number,1,set to missing (imputed later),cannot guess intended value,small loss of information
+Numbers stored as text with thousand separators,"value contains ','",1981,"separators stripped, cast to number","Indian-style '1,18,776' and '4,485' are numbers",none
+Exact duplicate rows,all columns identical,1,dropped (keep first),same customer counted twice,none
+Same customer_id with different values,duplicated customer_id,0,none found,one row per customer is required for ranking,may keep the older record
+Unrecognised/missing 'gender',"value not in ['Male', 'Female']",0,none found,"explicit category, not a guess",none
+Unrecognised/missing 'region',"value not in ['North', 'South', 'East', 'West', 'Metro']",0,none found,"explicit category, not a guess",none
+Unrecognised/missing 'customer_segment',"value not in ['Mass Market', 'Mass Affluent', 'Affluent', 'Private Banking']",0,none found,"explicit category, not a guess",none
+Missing 'monthly_income',null after parsing,1,kept as NaN + missing-indicator; median-imputed inside model pipeline,imputer fitted only on training folds,imputed values are estimates
+Missing 'avg_monthly_balance',null after parsing,1,kept as NaN + missing-indicator; median-imputed inside model pipeline,imputer fitted only on training folds,imputed values are estimates
+Missing values (all numeric fields),isna() count,2,see per-column rows,,
+Out-of-range 'age',"outside [18, 100]",1,set to missing (imputed in pipeline),domain limit,none
+Out-of-range 'credit_score',"outside [300, 850]",1,clipped to valid range,domain limit,none
+Out-of-range 'digital_engagement_score',"outside [0, 100]",0,none found,domain limit,none
+Out-of-range 'nps_score',"outside [-100, 100]",0,none found,domain limit,none
+Out-of-range 'tenure_years',"outside [0, 82]",0,none found,domain limit,none
+Out-of-range 'num_products',"outside [1, 10]",0,none found,domain limit,none
+Out-of-range 'branch_visits_last_year',"outside [0, 365]",0,none found,domain limit,none
+Out-of-range 'complaint_count_last_year',"outside [0, 50]",0,none found,domain limit,none
+Out-of-range 'last_transaction_days_ago',"outside [0, 3650]",0,none found,domain limit,none
+Out-of-range 'monthly_income',"outside [0, None]",0,none found,domain limit,none
+Out-of-range 'avg_monthly_balance',"outside [0, None]",0,none found,domain limit,none
+Non-binary 'has_credit_card',"value not in {0,1}",0,none found,binary flag,none
+Non-binary 'has_loan',"value not in {0,1}",0,none found,binary flag,none
+Non-binary 'has_investment_product',"value not in {0,1}",0,none found,binary flag,none
+Non-binary 'relationship_manager_assigned',"value not in {0,1}",0,none found,binary flag,none
+Non-binary 'churned',"value not in {0,1}",0,none found,binary flag,none
+Product flags exceed num_products,card+loan+investment > num_products,44,flagged (flag_product_mismatch); values kept,cannot tell which field is wrong; flag lets model and analysts see it,num_products may be understated for these rows
+Tenure longer than adult life,tenure_years > age - 18,175,flagged; values kept,"could be minor/joint accounts opened before 18, or data error; tenure is still predictive so not altered",tenure may be overstated for young customers
+Tenure longer than age (impossible),tenure_years > age,8,flagged; values kept,physically impossible -> data error,tenure unreliable for these rows
+Negative NPS,nps_score < 0,268,kept (valid on -100..100 scale),NPS can legitimately be negative,none
+Income censored at floor,"monthly_income == minimum (1,500 in training file)",34,flagged (income_floor),looks like a reporting floor; true income may be lower,income understates spread
+Credit score at ceiling,credit_score == 850,371,flagged (credit_cap),cap hides variation among best-credit customers,credit score less informative at the top
+'Aging' band disagrees with tenure_years,"band rebuilt as [0,1),[1,3),[3,7),[7,15),15+ vs original",25,original 'Aging' dropped; tenure_band recomputed from tenure_years,100% of mismatches sit exactly on a boundary (1/3/7/15): source mixed inclusive/exclusive edges (right-closed convention gives 28 mismatches). tenure_years is the primary field,none

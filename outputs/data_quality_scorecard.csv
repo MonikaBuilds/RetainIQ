@@ -1,0 +1,8 @@
+dimension,before,after
+Rows that are real customers,10000/10020 lines,10000
+"Completeness (non-null cells, data dictionary fields)",1.0000,1.0000
+Numeric columns stored as text,"yes (balance, e.g. '4,485')",no (all float/int)
+Validity (rows within all domain ranges),1.0000,1.0000
+Uniqueness (unique customer_id / rows),1.0000,1.0000
+Consistency (rows with no logic flag),not measured,0.9764
+Redundant/undocumented columns,Aging + empty column,removed; tenure_band rebuilt

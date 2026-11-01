@@ -1,0 +1,54 @@
+{
+  "alpha": 0.05,
+  "power": 0.8,
+  "reference_example": {
+    "baseline": 0.2,
+    "mde": 0.04,
+    "n_per_arm": 1445
+  },
+  "sizing": [
+    {
+      "group": "P1+P2 (high value)",
+      "customers": 2106,
+      "baseline_pred_churn": 0.0551,
+      "n_per_arm_for_4pp": 304,
+      "n_per_arm_for_20pct_relative": 6076,
+      "mde_with_available_n": 0.0245
+    },
+    {
+      "group": "P1+P3 (high risk)",
+      "customers": 2106,
+      "baseline_pred_churn": 0.3146,
+      "n_per_arm_for_4pp": 2037,
+      "n_per_arm_for_20pct_relative": 803,
+      "mde_with_available_n": 0.0552
+    },
+    {
+      "group": "Top 40% risk (all values)",
+      "customers": 3369,
+      "baseline_pred_churn": 0.2474,
+      "n_per_arm_for_4pp": 1721,
+      "n_per_arm_for_20pct_relative": 1107,
+      "mde_with_available_n": 0.0404
+    }
+  ],
+  "recommended_population": "P1 + P3 (high-risk quartile), stratified by tier x segment x risk decile",
+  "arms": {
+    "control": {
+      "n": 1051,
+      "mean_pred": 0.3145,
+      "mean_balance": 8826.0961,
+      "p1_share": 0.0542,
+      "mass_market_share": 0.7755
+    },
+    "treatment": {
+      "n": 1055,
+      "mean_pred": 0.3147,
+      "mean_balance": 10379.3517,
+      "p1_share": 0.0578,
+      "mass_market_share": 0.7687
+    }
+  },
+  "achievable_mde_pp": 0.05522652377233531,
+  "note": "Predicted churn is a historical-snapshot rate, not a 90/180-day rate; re-estimate the baseline from the control arm's first 30 days and extend the window if needed."
+}

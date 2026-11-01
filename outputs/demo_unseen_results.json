@@ -1,0 +1,163 @@
+{
+  "clean_unlabelled": {
+    "rows_in": 2000,
+    "rows_scored": 2000,
+    "roc_auc": 0.8206462912294417,
+    "top_decile_hit_rate": 0.545,
+    "base_rate": 0.158,
+    "top_decile_lift": 3.449367088607595,
+    "cleaning_actions": [
+      {
+        "issue": "Columns outside data dictionary",
+        "rows_affected": 1,
+        "action": "dropped ['aging']"
+      },
+      {
+        "issue": "Numbers stored as text with thousand separators",
+        "rows_affected": 1981,
+        "action": "separators stripped, cast to number"
+      },
+      {
+        "issue": "Product flags exceed num_products",
+        "rows_affected": 44,
+        "action": "flagged (flag_product_mismatch); values kept"
+      },
+      {
+        "issue": "Tenure longer than adult life",
+        "rows_affected": 175,
+        "action": "flagged; values kept"
+      },
+      {
+        "issue": "Tenure longer than age (impossible)",
+        "rows_affected": 8,
+        "action": "flagged; values kept"
+      },
+      {
+        "issue": "Negative NPS",
+        "rows_affected": 268,
+        "action": "kept (valid on -100..100 scale)"
+      },
+      {
+        "issue": "Income censored at floor",
+        "rows_affected": 34,
+        "action": "flagged (income_floor)"
+      },
+      {
+        "issue": "Credit score at ceiling",
+        "rows_affected": 370,
+        "action": "flagged (credit_cap)"
+      },
+      {
+        "issue": "'Aging' band disagrees with tenure_years",
+        "rows_affected": 25,
+        "action": "original 'Aging' dropped; tenure_band recomputed from tenure_years"
+      }
+    ]
+  },
+  "dirty_unlabelled": {
+    "rows_in": 2001,
+    "rows_scored": 2000,
+    "roc_auc": 0.8207646802369282,
+    "top_decile_hit_rate": 0.545,
+    "base_rate": 0.158,
+    "top_decile_lift": 3.449367088607595,
+    "cleaning_actions": [
+      {
+        "issue": "Junk rows above header",
+        "rows_affected": 1,
+        "action": "dropped"
+      },
+      {
+        "issue": "Columns outside data dictionary",
+        "rows_affected": 1,
+        "action": "dropped ['aging']"
+      },
+      {
+        "issue": "Non-customer rows (pasted summary/pivot tables)",
+        "rows_affected": 2,
+        "action": "dropped"
+      },
+      {
+        "issue": "Unparseable value in 'avg_monthly_balance'",
+        "rows_affected": 1,
+        "action": "set to missing (imputed later)"
+      },
+      {
+        "issue": "Numbers stored as text with thousand separators",
+        "rows_affected": 1981,
+        "action": "separators stripped, cast to number"
+      },
+      {
+        "issue": "Exact duplicate rows",
+        "rows_affected": 1,
+        "action": "dropped (keep first)"
+      },
+      {
+        "issue": "Missing 'monthly_income'",
+        "rows_affected": 1,
+        "action": "kept as NaN + missing-indicator; median-imputed inside model pipeline"
+      },
+      {
+        "issue": "Missing 'avg_monthly_balance'",
+        "rows_affected": 1,
+        "action": "kept as NaN + missing-indicator; median-imputed inside model pipeline"
+      },
+      {
+        "issue": "Missing values (all numeric fields)",
+        "rows_affected": 2,
+        "action": "see per-column rows"
+      },
+      {
+        "issue": "Out-of-range 'age'",
+        "rows_affected": 1,
+        "action": "set to missing (imputed in pipeline)"
+      },
+      {
+        "issue": "Out-of-range 'credit_score'",
+        "rows_affected": 1,
+        "action": "clipped to valid range"
+      },
+      {
+        "issue": "Product flags exceed num_products",
+        "rows_affected": 44,
+        "action": "flagged (flag_product_mismatch); values kept"
+      },
+      {
+        "issue": "Tenure longer than adult life",
+        "rows_affected": 175,
+        "action": "flagged; values kept"
+      },
+      {
+        "issue": "Tenure longer than age (impossible)",
+        "rows_affected": 8,
+        "action": "flagged; values kept"
+      },
+      {
+        "issue": "Negative NPS",
+        "rows_affected": 268,
+        "action": "kept (valid on -100..100 scale)"
+      },
+      {
+        "issue": "Income censored at floor",
+        "rows_affected": 34,
+        "action": "flagged (income_floor)"
+      },
+      {
+        "issue": "Credit score at ceiling",
+        "rows_affected": 371,
+        "action": "flagged (credit_cap)"
+      },
+      {
+        "issue": "'Aging' band disagrees with tenure_years",
+        "rows_affected": 25,
+        "action": "original 'Aging' dropped; tenure_band recomputed from tenure_years"
+      }
+    ]
+  },
+  "clean_vs_dirty_identical_scores_share": 0.9985,
+  "checks": {
+    "all 2,000 customers scored from dirty file": true,
+    "model never trained on these customers": true,
+    "demo AUC within 0.02 of reported hold-out AUC": true
+  }
+}

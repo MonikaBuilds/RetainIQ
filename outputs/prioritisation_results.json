@@ -1,0 +1,610 @@
+{
+  "backtest_all_10k": {
+    "Probability only": {
+      "100": {
+        "churners": 75,
+        "churned_balance": 597583.0,
+        "share_churned_balance": 0.02659652094613495
+      },
+      "250": {
+        "churners": 185,
+        "churned_balance": 1183819.0,
+        "share_churned_balance": 0.05268802296908133
+      },
+      "500": {
+        "churners": 317,
+        "churned_balance": 2008249.0,
+        "share_churned_balance": 0.08938078324442725
+      },
+      "1000": {
+        "churners": 546,
+        "churned_balance": 3404512.0,
+        "share_churned_balance": 0.1515240137677407
+      },
+      "2000": {
+        "churners": 869,
+        "churned_balance": 6020189.0,
+        "share_churned_balance": 0.2679394876330003
+      }
+    },
+    "Balance only": {
+      "100": {
+        "churners": 3,
+        "churned_balance": 1398038.0,
+        "share_churned_balance": 0.06222223013454635
+      },
+      "250": {
+        "churners": 12,
+        "churned_balance": 4376907.0,
+        "share_churned_balance": 0.19480222614228432
+      },
+      "500": {
+        "churners": 21,
+        "churned_balance": 6360645.0,
+        "share_churned_balance": 0.2830921026425259
+      },
+      "1000": {
+        "churners": 48,
+        "churned_balance": 9026402.0,
+        "share_churned_balance": 0.401736478215134
+      },
+      "2000": {
+        "churners": 117,
+        "churned_balance": 12563526.0,
+        "share_churned_balance": 0.5591626308250252
+      }
+    },
+    "Probability x balance (RetainIQ)": {
+      "100": {
+        "churners": 24,
+        "churned_balance": 3742398.0,
+        "share_churned_balance": 0.16656224624156568
+      },
+      "250": {
+        "churners": 58,
+        "churned_balance": 6670759.0,
+        "share_churned_balance": 0.2968942916216128
+      },
+      "500": {
+        "churners": 96,
+        "churned_balance": 8072229.0,
+        "share_churned_balance": 0.35926926917348384
+      },
+      "1000": {
+        "churners": 185,
+        "churned_balance": 10923864.0,
+        "share_churned_balance": 0.4861864840344011
+      },
+      "2000": {
+        "churners": 381,
+        "churned_balance": 15169930.0,
+        "share_churned_balance": 0.6751653929184749
+      }
+    }
+  },
+  "backtest_note": "Out-of-fold probabilities vs actual outcomes on all 10,000 customers: which rule would have caught the most leaving money for a fixed contact budget?",
+  "active_customers": 8422,
+  "tier_cutoffs": {
+    "high_risk_prob": 0.1705382601359484,
+    "medium_risk_prob": 0.0796366802433409,
+    "high_value_balance": 30991.25,
+    "rule": "top quartile of OOF probability / top quartile of balance among ACTIVE customers"
+  },
+  "tier_summary": {
+    "P1": {
+      "customers": 118,
+      "mean_prob": 0.27,
+      "expected_churners": 32.3,
+      "total_balance": 8192490.0,
+      "balance_at_risk": 2065880.14,
+      "annual_value_at_risk": 55013.78,
+      "net_value": 15308.27,
+      "positive_net": 86,
+      "share_balance_at_risk": 0.12
+    },
+    "P2": {
+      "customers": 1988,
+      "mean_prob": 0.04,
+      "expected_churners": 83.72,
+      "total_balance": 259412992.0,
+      "balance_at_risk": 8983422.07,
+      "annual_value_at_risk": 237514.66,
+      "net_value": 62988.79,
+      "positive_net": 1029,
+      "share_balance_at_risk": 0.51
+    },
+    "P3": {
+      "customers": 1988,
+      "mean_prob": 0.32,
+      "expected_churners": 630.26,
+      "total_balance": 12033953.0,
+      "balance_at_risk": 3715277.81,
+      "annual_value_at_risk": 134262.39,
+      "net_value": 70617.43,
+      "positive_net": 1988,
+      "share_balance_at_risk": 0.21
+    },
+    "P4": {
+      "customers": 4328,
+      "mean_prob": 0.07,
+      "expected_churners": 323.1,
+      "total_balance": 40345885.0,
+      "balance_at_risk": 2833962.39,
+      "annual_value_at_risk": 106541.25,
+      "net_value": 63924.75,
+      "positive_net": 4328,
+      "share_balance_at_risk": 0.16
+    }
+  },
+  "budget_active_expected": {
+    "Probability only": {
+      "100": {
+        "expected_churners": 63.72964925739458,
+        "expected_churners_saved": 12.745929851478916,
+        "balance_at_risk": 503686.25567169476,
+        "expected_balance_protected": 100737.25113433896,
+        "expected_annual_value_protected": 3204.5641844049196,
+        "expected_horizon_value_protected": 9613.692553214758,
+        "cost_at_default_contact": 2500.0,
+        "segment_mix": {
+          "Mass Market": 81,
+          "Mass Affluent": 19
+        }
+      },
+      "200": {
+        "expected_churners": 116.73724592935761,
+        "expected_churners_saved": 23.347449185871525,
+        "balance_at_risk": 823959.1899349326,
+        "expected_balance_protected": 164791.83798698653,
+        "expected_annual_value_protected": 5372.911940023986,
+        "expected_horizon_value_protected": 16118.735820071957,
+        "cost_at_default_contact": 5000.0,
+        "segment_mix": {
+          "Mass Market": 166,
+          "Mass Affluent": 34
+        }
+      },
+      "250": {
+        "expected_churners": 141.07338551963556,
+        "expected_churners_saved": 28.214677103927116,
+        "balance_at_risk": 1015238.6931410913,
+        "expected_balance_protected": 203047.73862821827,
+        "expected_annual_value_protected": 6621.464664269018,
+        "expected_horizon_value_protected": 19864.393992807054,
+        "cost_at_default_contact": 6250.0,
+        "segment_mix": {
+          "Mass Market": 207,
+          "Mass Affluent": 43
+        }
+      },
+      "500": {
+        "expected_churners": 247.77627698141876,
+        "expected_churners_saved": 49.555255396283755,
+        "balance_at_risk": 1703416.7019794516,
+        "expected_balance_protected": 340683.34039589035,
+        "expected_annual_value_protected": 11348.397477604507,
+        "expected_horizon_value_protected": 34045.19243281352,
+        "cost_at_default_contact": 12500.0,
+        "segment_mix": {
+          "Mass Market": 422,
+          "Mass Affluent": 77,
+          "Affluent": 1
+        }
+      },
+      "1000": {
+        "expected_churners": 415.30358925545784,
+        "expected_churners_saved": 83.06071785109157,
+        "balance_at_risk": 2958017.689104804,
+        "expected_balance_protected": 591603.5378209607,
+        "expected_annual_value_protected": 19738.90501712591,
+        "expected_horizon_value_protected": 59216.71505137773,
+        "cost_at_default_contact": 25000.0,
+        "segment_mix": {
+          "Mass Market": 833,
+          "Mass Affluent": 159,
+          "Affluent": 6,
+          "Private Banking": 2
+        }
+      }
+    },
+    "Balance only": {
+      "100": {
+        "expected_churners": 2.6688359296417405,
+        "expected_churners_saved": 0.5337671859283482,
+        "balance_at_risk": 1589963.0184056563,
+        "expected_balance_protected": 317992.60368113127,
+        "expected_annual_value_protected": 8055.88659084995,
+        "expected_horizon_value_protected": 24167.65977254985,
+        "cost_at_default_contact": 2500.0,
+        "segment_mix": {
+          "Private Banking": 99,
+          "Affluent": 1
+        }
+      },
+      "200": {
+        "expected_churners": 5.758217886035949,
+        "expected_churners_saved": 1.1516435772071898,
+        "balance_at_risk": 2677248.6763388542,
+        "expected_balance_protected": 535449.7352677708,
+        "expected_annual_value_protected": 13618.351629678406,
+        "expected_horizon_value_protected": 40855.054889035215,
+        "cost_at_default_contact": 5000.0,
+        "segment_mix": {
+          "Private Banking": 197,
+          "Affluent": 3
+        }
+      },
+      "250": {
+        "expected_churners": 7.514703149971056,
+        "expected_churners_saved": 1.5029406299942112,
+        "balance_at_risk": 3177944.0824984396,
+        "expected_balance_protected": 635588.816499688,
+        "expected_annual_value_protected": 16188.940425750836,
+        "expected_horizon_value_protected": 48566.82127725251,
+        "cost_at_default_contact": 6250.0,
+        "segment_mix": {
+          "Private Banking": 246,
+          "Affluent": 4
+        }
+      },
+      "500": {
+        "expected_churners": 17.068853717638312,
+        "expected_churners_saved": 3.4137707435276625,
+        "balance_at_risk": 5135352.301328705,
+        "expected_balance_protected": 1027070.460265741,
+        "expected_annual_value_protected": 26330.338736607504,
+        "expected_horizon_value_protected": 78991.01620982251,
+        "cost_at_default_contact": 12500.0,
+        "segment_mix": {
+          "Private Banking": 417,
+          "Affluent": 83
+        }
+      },
+      "1000": {
+        "expected_churners": 39.794116050096214,
+        "expected_churners_saved": 7.9588232100192435,
+        "balance_at_risk": 7527473.18903321,
+        "expected_balance_protected": 1505494.637806642,
+        "expected_annual_value_protected": 38985.91075241063,
+        "expected_horizon_value_protected": 116957.7322572319,
+        "cost_at_default_contact": 25000.0,
+        "segment_mix": {
+          "Affluent": 523,
+          "Private Banking": 465,
+          "Mass Affluent": 12
+        }
+      }
+    },
+    "Probability x balance (RetainIQ)": {
+      "100": {
+        "expected_churners": 17.28710932088157,
+        "expected_churners_saved": 3.457421864176314,
+        "balance_at_risk": 3189669.7479660762,
+        "expected_balance_protected": 637933.9495932152,
+        "expected_annual_value_protected": 16388.265812597972,
+        "expected_horizon_value_protected": 49164.79743779392,
+        "cost_at_default_contact": 2500.0,
+        "segment_mix": {
+          "Private Banking": 68,
+          "Affluent": 20,
+          "Mass Affluent": 12
+        }
+      },
+      "200": {
+        "expected_churners": 35.60677322732738,
+        "expected_churners_saved": 7.121354645465477,
+        "balance_at_risk": 4707482.86614555,
+        "expected_balance_protected": 941496.5732291101,
+        "expected_annual_value_protected": 24395.13460155149,
+        "expected_horizon_value_protected": 73185.40380465447,
+        "cost_at_default_contact": 5000.0,
+        "segment_mix": {
+          "Private Banking": 108,
+          "Affluent": 60,
+          "Mass Affluent": 32
+        }
+      },
+      "250": {
+        "expected_churners": 44.009317120048294,
+        "expected_churners_saved": 8.801863424009658,
+        "balance_at_risk": 5289428.756250784,
+        "expected_balance_protected": 1057885.751250157,
+        "expected_annual_value_protected": 27483.054859184882,
+        "expected_horizon_value_protected": 82449.16457755465,
+        "cost_at_default_contact": 6250.0,
+        "segment_mix": {
+          "Private Banking": 125,
+          "Affluent": 79,
+          "Mass Affluent": 46
+        }
+      },
+      "500": {
+        "expected_churners": 84.35775791272542,
+        "expected_churners_saved": 16.871551582545084,
+        "balance_at_risk": 7503469.71248259,
+        "expected_balance_protected": 1500693.9424965181,
+        "expected_annual_value_protected": 39456.95445705234,
+        "expected_horizon_value_protected": 118370.86337115703,
+        "cost_at_default_contact": 12500.0,
+        "segment_mix": {
+          "Private Banking": 201,
+          "Affluent": 164,
+          "Mass Affluent": 131,
+          "Mass Market": 4
+        }
+      },
+      "1000": {
+        "expected_churners": 157.1295124303134,
+        "expected_churners_saved": 31.425902486062682,
+        "balance_at_risk": 10208760.984751586,
+        "expected_balance_protected": 2041752.1969503174,
+        "expected_annual_value_protected": 54481.53360650377,
+        "expected_horizon_value_protected": 163444.6008195113,
+        "cost_at_default_contact": 25000.0,
+        "segment_mix": {
+          "Affluent": 347,
+          "Mass Affluent": 329,
+          "Private Banking": 293,
+          "Mass Market": 31
+        }
+      }
+    }
+  },
+  "budget_assumptions": {
+    "save_rate": 0.2,
+    "nim": 0.025,
+    "value_horizon_years": 3,
+    "fee_per_product": 50.0,
+    "default_contact_cost": 25.0,
+    "tier_costs": {
+      "P1": 150.0,
+      "P2": 40.0,
+      "P3": 5.0,
+      "P4": 0.0
+    }
+  },
+  "top200": {
+    "tiers": {
+      "P2": 138,
+      "P3": 32,
+      "P1": 30
+    },
+    "segments": {
+      "Private Banking": 108,
+      "Affluent": 50,
+      "Mass Affluent": 41,
+      "Mass Market": 1
+    },
+    "mean_prob": 0.18967139751295498,
+    "balance_at_risk": 4609626.5182917155,
+    "share_of_all_active_balance_at_risk": 0.2619322901914107,
+    "net_value": 61730.44951105467,
+    "top_actions": {
+      "complaint recovery (48h SLA + follow-up); assign RM / digital concierge": 29,
+      "complaint recovery (48h SLA + follow-up); 90-day onboarding programme": 22,
+      "assign RM / digital concierge": 20,
+      "complaint recovery (48h SLA + follow-up)": 18,
+      "complaint recovery (48h SLA + follow-up); re-engagement journey": 15
+    }
+  },
+  "heavy_tail": {
+    "winsor_cap_99pct": 445628.04999999964,
+    "largest_single_share_of_top100_bal_at_risk": 0.03176105221064586,
+    "jaccard_top250_raw_vs_winsor": 0.968503937007874,
+    "jaccard_top1000_raw_vs_winsor": 0.9841269841269841,
+    "total_bal_at_risk_raw": 17598542.41309144,
+    "total_bal_at_risk_winsor": 17192595.901886653
+  },
+  "sensitivity": [
+    {
+      "scenario": "value horizon 1 year",
+      "jaccard_top250": 0.623,
+      "share_of_top250_changed": 0.232,
+      "n_positive_net_value": 6459.0,
+      "total_net_value_top250": 16992.493,
+      "p1_jaccard_vs_base": NaN,
+      "p1_size": NaN
+    },
+    {
+      "scenario": "value horizon 5 years",
+      "jaccard_top250": 0.901,
+      "share_of_top250_changed": 0.052,
+      "n_positive_net_value": 7809.0,
+      "total_net_value_top250": 123053.409,
+      "p1_jaccard_vs_base": NaN,
+      "p1_size": NaN
+    },
+    {
+      "scenario": "NIM halved (1.25%)",
+      "jaccard_top250": 0.706,
+      "share_of_top250_changed": 0.172,
+      "n_positive_net_value": 6930.0,
+      "total_net_value_top250": 31312.152,
+      "p1_jaccard_vs_base": NaN,
+      "p1_size": NaN
+    },
+    {
+      "scenario": "NIM +50% (3.75%)",
+      "jaccard_top250": 0.887,
+      "share_of_top250_changed": 0.06,
+      "n_positive_net_value": 7724.0,
+      "total_net_value_top250": 107757.602,
+      "p1_jaccard_vs_base": NaN,
+      "p1_size": NaN
+    },
+    {
+      "scenario": "fee per product 0",
+      "jaccard_top250": 0.908,
+      "share_of_top250_changed": 0.048,
+      "n_positive_net_value": 7274.0,
+      "total_net_value_top250": 65565.325,
+      "p1_jaccard_vs_base": NaN,
+      "p1_size": NaN
+    },
+    {
+      "scenario": "fee per product 100",
+      "jaccard_top250": 0.946,
+      "share_of_top250_changed": 0.028,
+      "n_positive_net_value": 7512.0,
+      "total_net_value_top250": 72537.406,
+      "p1_jaccard_vs_base": NaN,
+      "p1_size": NaN
+    },
+    {
+      "scenario": "save rate 10%",
+      "jaccard_top250": 0.767,
+      "share_of_top250_changed": 0.132,
+      "n_positive_net_value": 6867.0,
+      "total_net_value_top250": 29398.104,
+      "p1_jaccard_vs_base": NaN,
+      "p1_size": NaN
+    },
+    {
+      "scenario": "save rate 30%",
+      "jaccard_top250": 0.923,
+      "share_of_top250_changed": 0.04,
+      "n_positive_net_value": 7747.0,
+      "total_net_value_top250": 109446.974,
+      "p1_jaccard_vs_base": NaN,
+      "p1_size": NaN
+    },
+    {
+      "scenario": "flat contact cost 10",
+      "jaccard_top250": 0.761,
+      "share_of_top250_changed": 0.136,
+      "n_positive_net_value": 6181.0,
+      "total_net_value_top250": 80079.347,
+      "p1_jaccard_vs_base": NaN,
+      "p1_size": NaN
+    },
+    {
+      "scenario": "flat contact cost 50",
+      "jaccard_top250": 0.761,
+      "share_of_top250_changed": 0.136,
+      "n_positive_net_value": 1577.0,
+      "total_net_value_top250": 70079.347,
+      "p1_jaccard_vs_base": NaN,
+      "p1_size": NaN
+    },
+    {
+      "scenario": "balance winsorised at p99",
+      "jaccard_top250": 0.969,
+      "share_of_top250_changed": 0.016,
+      "n_positive_net_value": 7430.0,
+      "total_net_value_top250": 63975.304,
+      "p1_jaccard_vs_base": NaN,
+      "p1_size": NaN
+    },
+    {
+      "scenario": "high-risk cut at top 30%",
+      "jaccard_top250": NaN,
+      "share_of_top250_changed": NaN,
+      "n_positive_net_value": NaN,
+      "total_net_value_top250": NaN,
+      "p1_jaccard_vs_base": 0.728,
+      "p1_size": 162.0
+    },
+    {
+      "scenario": "high-risk cut at top 20%",
+      "jaccard_top250": NaN,
+      "share_of_top250_changed": NaN,
+      "n_positive_net_value": NaN,
+      "total_net_value_top250": NaN,
+      "p1_jaccard_vs_base": 0.653,
+      "p1_size": 77.0
+    }
+  ],
+  "n_positive_net_value_base": 7431,
+  "tier_mix_by_group": {
+    "gender": {
+      "Female": {
+        "P1": 0.015,
+        "P2": 0.23,
+        "P3": 0.242,
+        "P4": 0.513
+      },
+      "Male": {
+        "P1": 0.013,
+        "P2": 0.241,
+        "P3": 0.231,
+        "P4": 0.514
+      }
+    },
+    "region": {
+      "East": {
+        "P1": 0.012,
+        "P2": 0.234,
+        "P3": 0.247,
+        "P4": 0.507
+      },
+      "Metro": {
+        "P1": 0.014,
+        "P2": 0.249,
+        "P3": 0.226,
+        "P4": 0.511
+      },
+      "North": {
+        "P1": 0.013,
+        "P2": 0.244,
+        "P3": 0.219,
+        "P4": 0.523
+      },
+      "South": {
+        "P1": 0.014,
+        "P2": 0.212,
+        "P3": 0.259,
+        "P4": 0.516
+      },
+      "West": {
+        "P1": 0.017,
+        "P2": 0.243,
+        "P3": 0.231,
+        "P4": 0.51
+      }
+    },
+    "age_band": {
+      "18-25": {
+        "P1": 0.012,
+        "P2": 0.235,
+        "P3": 0.219,
+        "P4": 0.534
+      },
+      "26-35": {
+        "P1": 0.009,
+        "P2": 0.23,
+        "P3": 0.204,
+        "P4": 0.557
+      },
+      "36-45": {
+        "P1": 0.017,
+        "P2": 0.24,
+        "P3": 0.228,
+        "P4": 0.515
+      },
+      "46-55": {
+        "P1": 0.011,
+        "P2": 0.232,
+        "P3": 0.258,
+        "P4": 0.5
+      },
+      "56-65": {
+        "P1": 0.021,
+        "P2": 0.257,
+        "P3": 0.266,
+        "P4": 0.457
+      },
+      "65+": {
+        "P1": 0.032,
+        "P2": 0.214,
+        "P3": 0.329,
+        "P4": 0.425
+      }
+    }
+  },
+  "checks": {
+    "ranked list contains only active customers": true,
+    "ranked list size == active customers": true,
+    "probabilities are out-of-fold": true,
+    "all tiers populated": true
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "high_risk_prob": 0.1705382601359484,
+  "medium_risk_prob": 0.0796366802433409,
+  "high_value_balance": 30991.25,
+  "rule": "top quartile of OOF probability / top quartile of balance among ACTIVE customers"
+}

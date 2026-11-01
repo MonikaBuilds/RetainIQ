@@ -1,0 +1,55 @@
+﻿clean_frame: 10000 -> 10000 rows
+[PASS] row count == 10,000
+[PASS] no duplicate IDs
+[PASS] no text in numeric columns
+[PASS] no missing values
+[PASS] balance max < 2M (no summary rows)
+[PASS] tenure max <= 82
+[PASS] churn in {0,1}
+                                              issue  rows_affected                                                              action
+0                            Junk rows above header              1                                                             dropped
+1                   Columns outside data dictionary              2                                        dropped ['aging', '<empty>']
+2   Non-customer rows (pasted summary/pivot tables)             18                                                             dropped
+3   Numbers stored as text with thousand separators           9895                                 separators stripped, cast to number
+4                              Exact duplicate rows              0                                                          none found
+5            Same customer_id with different values              0                                                          none found
+6                     Unrecognised/missing 'gender'              0                                                          none found
+7                     Unrecognised/missing 'region'              0                                                          none found
+8           Unrecognised/missing 'customer_segment'              0                                                          none found
+9               Missing values (all numeric fields)              0                        none found - logic kept for hidden test file
+10                               Out-of-range 'age'              0                                                          none found
+11                      Out-of-range 'credit_score'              0                                                          none found
+12          Out-of-range 'digital_engagement_score'              0                                                          none found
+13                         Out-of-range 'nps_score'              0                                                          none found
+14                      Out-of-range 'tenure_years'              0                                                          none found
+15                      Out-of-range 'num_products'              0                                                          none found
+16           Out-of-range 'branch_visits_last_year'              0                                                          none found
+17         Out-of-range 'complaint_count_last_year'              0                                                          none found
+18         Out-of-range 'last_transaction_days_ago'              0                                                          none found
+19                    Out-of-range 'monthly_income'              0                                                          none found
+20               Out-of-range 'avg_monthly_balance'              0                                                          none found
+21                     Non-binary 'has_credit_card'              0                                                          none found
+22                            Non-binary 'has_loan'              0                                                          none found
+23              Non-binary 'has_investment_product'              0                                                          none found
+24       Non-binary 'relationship_manager_assigned'              0                                                          none found
+25                             Non-binary 'churned'              0                                                          none found
+26                Product flags exceed num_products            199                        flagged (flag_product_mismatch); values kept
+27                    Tenure longer than adult life           1009                                                flagged; values kept
+28              Tenure longer than age (impossible)             38                                                flagged; values kept
+29                                     Negative NPS           1350                                     kept (valid on -100..100 scale)
+30                         Income censored at floor            157                                              flagged (income_floor)
+31                          Credit score at ceiling           1870                                                flagged (credit_cap)
+32         'Aging' band disagrees with tenure_years            137  original 'Aging' dropped; tenure_band recomputed from tenure_years
+                                               dimension                       before                         after
+0                           Rows that are real customers            10000/10020 lines                         10000
+1  Completeness (non-null cells, data dictionary fields)                       1.0000                        1.0000
+2                         Numeric columns stored as text  yes (balance, e.g. '4,485')            no (all float/int)
+3               Validity (rows within all domain ranges)                       1.0000                        1.0000
+4                 Uniqueness (unique customer_id / rows)                       1.0000                        1.0000
+5                  Consistency (rows with no logic flag)                 not measured                        0.9764
+6                         Redundant/undocumented columns         Aging + empty column  removed; tenure_band rebuilt
+{
+  "low_engagement_cutoff": 41.6,
+  "rm_eligible_balance": 28796.0,
+  "income_floor": 1500.0
+}

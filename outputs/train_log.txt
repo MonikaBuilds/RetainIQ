@@ -1,0 +1,19 @@
+﻿[14:18:32] split train=8000 holdout=2000
+[14:18:52] variant A_full done
+[14:19:11] variant B_no_inactivity done
+[14:19:29] variant C_early_warning done
+[14:19:29] chosen per variant: {'A_full': ('logreg', {'C': 1.0}), 'B_no_inactivity': ('logreg', {'C': 0.1}), 'C_early_warning': ('logreg', {'C': 1.0})}
+[14:19:29] leakage: A=0.845 B=0.821 C=0.812
+[14:19:29] DEPLOY variant=B_no_inactivity model=logreg {'C': 0.1}
+[14:19:35] imbalance comparison done
+[14:19:40] HOLDOUT roc=0.821 [0.796,0.843] pr=0.499 lift10=3.45
+[14:19:46] stability roc 0.808+-0.010
+[14:19:46] stress tests done
+[14:19:54] augmentation ablation done
+[PASS] no ID overlap train/hold-out
+[PASS] no id/target/protected attrs in features (A_full)
+[PASS] no id/target/protected attrs in features (B_no_inactivity)
+[PASS] no id/target/protected attrs in features (C_early_warning)
+[PASS] synthetic parents only from training split
+[PASS] no synthetic rows in hold-out
+[14:19:56] saved metrics.json and retainiq_model.pkl

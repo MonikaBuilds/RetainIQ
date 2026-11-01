@@ -1,0 +1,1098 @@
+{
+  "overall": {
+    "customers": 10000,
+    "churners": 1578,
+    "churn_rate": 0.1578,
+    "churn_rate_ci": [
+      0.15078645301943353,
+      0.16507635546545754
+    ],
+    "churned_balance_share": 0.06561021073252264,
+    "total_balance": 342453785.0,
+    "churned_balance": 22468465.0,
+    "accuracy_of_predict_nobody": 0.8422000000000001,
+    "churned_balance_share_winsor99": 0.06885534201597289
+  },
+  "table_segment": {
+    "Mass Market": {
+      "customers": 5295.0,
+      "churners": 1153.0,
+      "total_balance": 19450002.0,
+      "churned_balance": 4229655.0,
+      "churn_rate": 0.217752596789424,
+      "ci_low": 0.2068428422081648,
+      "ci_high": 0.22907158866721572,
+      "share_of_churners": 0.7306717363751585,
+      "share_of_churned_balance": 0.18824850740804946
+    },
+    "Mass Affluent": {
+      "customers": 2733.0,
+      "churners": 327.0,
+      "total_balance": 56507232.0,
+      "churned_balance": 6894317.0,
+      "churn_rate": 0.11964873765093303,
+      "ci_low": 0.10801167913857107,
+      "ci_high": 0.13235352605097553,
+      "share_of_churners": 0.20722433460076045,
+      "share_of_churned_balance": 0.30684414800922094
+    },
+    "Affluent": {
+      "customers": 1483.0,
+      "churners": 78.0,
+      "total_balance": 109952470.0,
+      "churned_balance": 5566754.0,
+      "churn_rate": 0.052596089008766014,
+      "ci_low": 0.04234683792783826,
+      "ci_high": 0.06515719881557772,
+      "share_of_churners": 0.049429657794676805,
+      "share_of_churned_balance": 0.2477585362417949
+    },
+    "Private Banking": {
+      "customers": 489.0,
+      "churners": 20.0,
+      "total_balance": 156544081.0,
+      "churned_balance": 5777739.0,
+      "churn_rate": 0.0408997955010225,
+      "ci_low": 0.026629987651382796,
+      "ci_high": 0.062326527747303566,
+      "share_of_churners": 0.012674271229404309,
+      "share_of_churned_balance": 0.25714880834093473
+    }
+  },
+  "table_products": {
+    "1": {
+      "customers": 2559.0,
+      "churners": 923.0,
+      "total_balance": 14660282.0,
+      "churned_balance": 5632390.0,
+      "churn_rate": 0.36068776865963265,
+      "ci_low": 0.34230412582793796,
+      "ci_high": 0.37948904341160944,
+      "share_of_churners": 0.5849176172370089,
+      "share_of_churned_balance": 0.2506797860913062
+    },
+    "2": {
+      "customers": 3777.0,
+      "churners": 459.0,
+      "total_balance": 48363450.0,
+      "churned_balance": 4897964.0,
+      "churn_rate": 0.12152501985702939,
+      "ci_low": 0.1114876547527753,
+      "ci_high": 0.13233147092625577,
+      "share_of_churners": 0.2908745247148289,
+      "share_of_churned_balance": 0.2179928179339354
+    },
+    "3": {
+      "customers": 2422.0,
+      "churners": 141.0,
+      "total_balance": 99716693.0,
+      "churned_balance": 4575869.0,
+      "churn_rate": 0.05821635012386457,
+      "ci_low": 0.04957188041593958,
+      "ci_high": 0.06825999923198017,
+      "share_of_churners": 0.08935361216730038,
+      "share_of_churned_balance": 0.20365739270573224
+    },
+    "4": {
+      "customers": 969.0,
+      "churners": 47.0,
+      "total_balance": 116566105.0,
+      "churned_balance": 5951843.0,
+      "churn_rate": 0.048503611971104234,
+      "ci_low": 0.03666971988728897,
+      "ci_high": 0.06390315139977595,
+      "share_of_churners": 0.029784537389100127,
+      "share_of_churned_balance": 0.2648976242925362
+    },
+    "5+": {
+      "customers": 273.0,
+      "churners": 8.0,
+      "total_balance": 63147255.0,
+      "churned_balance": 1410399.0,
+      "churn_rate": 0.029304029304029304,
+      "ci_low": 0.014922102720086552,
+      "ci_high": 0.0567487333794484,
+      "share_of_churners": 0.005069708491761723,
+      "share_of_churned_balance": 0.06277237897648993
+    }
+  },
+  "table_complaints": {
+    "0": {
+      "customers": 7001.0,
+      "churners": 919.0,
+      "total_balance": 241706714.0,
+      "churned_balance": 11702845.0,
+      "churn_rate": 0.13126696186259107,
+      "ci_low": 0.1235585327658321,
+      "ci_high": 0.13937981775192237,
+      "share_of_churners": 0.582382762991128,
+      "share_of_churned_balance": 0.5208564537007757
+    },
+    "1": {
+      "customers": 2475.0,
+      "churners": 497.0,
+      "total_balance": 84238959.0,
+      "churned_balance": 7981002.0,
+      "churn_rate": 0.2008080808080808,
+      "ci_low": 0.18549462766556005,
+      "ci_high": 0.21704884895331814,
+      "share_of_churners": 0.3149556400506971,
+      "share_of_churned_balance": 0.3552090452106986
+    },
+    "2": {
+      "customers": 457.0,
+      "churners": 142.0,
+      "total_balance": 14809840.0,
+      "churned_balance": 2479677.0,
+      "churn_rate": 0.31072210065645517,
+      "ci_low": 0.27001761873086244,
+      "ci_high": 0.35458212877729006,
+      "share_of_churners": 0.08998732572877059,
+      "share_of_churned_balance": 0.11036254590600648
+    },
+    "3+": {
+      "customers": 67.0,
+      "churners": 20.0,
+      "total_balance": 1698272.0,
+      "churned_balance": 304941.0,
+      "churn_rate": 0.29850746268656714,
+      "ci_low": 0.20231511276602715,
+      "ci_high": 0.41655213743643765,
+      "share_of_churners": 0.012674271229404309,
+      "share_of_churned_balance": 0.013571955182519144
+    }
+  },
+  "table_complaints_raw": {
+    "0.0": {
+      "customers": 7001.0,
+      "churners": 919.0,
+      "total_balance": 241706714.0,
+      "churned_balance": 11702845.0,
+      "churn_rate": 0.13126696186259107,
+      "ci_low": 0.1235585327658321,
+      "ci_high": 0.13937981775192237,
+      "share_of_churners": 0.582382762991128,
+      "share_of_churned_balance": 0.5208564537007757
+    },
+    "1.0": {
+      "customers": 2475.0,
+      "churners": 497.0,
+      "total_balance": 84238959.0,
+      "churned_balance": 7981002.0,
+      "churn_rate": 0.2008080808080808,
+      "ci_low": 0.18549462766556005,
+      "ci_high": 0.21704884895331814,
+      "share_of_churners": 0.3149556400506971,
+      "share_of_churned_balance": 0.3552090452106986
+    },
+    "2.0": {
+      "customers": 457.0,
+      "churners": 142.0,
+      "total_balance": 14809840.0,
+      "churned_balance": 2479677.0,
+      "churn_rate": 0.31072210065645517,
+      "ci_low": 0.27001761873086244,
+      "ci_high": 0.35458212877729006,
+      "share_of_churners": 0.08998732572877059,
+      "share_of_churned_balance": 0.11036254590600648
+    },
+    "3.0": {
+      "customers": 59.0,
+      "churners": 16.0,
+      "total_balance": 1491214.0,
+      "churned_balance": 270065.0,
+      "churn_rate": 0.2711864406779661,
+      "ci_low": 0.1743697093791805,
+      "ci_high": 0.3959776296754516,
+      "share_of_churners": 0.010139416983523447,
+      "share_of_churned_balance": 0.012019735215556559
+    },
+    "4.0": {
+      "customers": 7.0,
+      "churners": 3.0,
+      "total_balance": 204765.0,
+      "churned_balance": 32583.0,
+      "churn_rate": 0.42857142857142855,
+      "ci_low": 0.15821985525146964,
+      "ci_high": 0.7495416354723428,
+      "share_of_churners": 0.0019011406844106464,
+      "share_of_churned_balance": 0.0014501658212966485
+    },
+    "5.0": {
+      "customers": 1.0,
+      "churners": 1.0,
+      "total_balance": 2293.0,
+      "churned_balance": 2293.0,
+      "churn_rate": 1.0,
+      "ci_low": 0.2065493143772374,
+      "ci_high": 1.0,
+      "share_of_churners": 0.0006337135614702154,
+      "share_of_churned_balance": 0.00010205414566593668
+    }
+  },
+  "table_rm": {
+    "0.0": {
+      "customers": 7933.0,
+      "churners": 1471.0,
+      "total_balance": 119829128.0,
+      "churned_balance": 14536611.0,
+      "churn_rate": 0.18542795915794782,
+      "ci_low": 0.17702865125363365,
+      "ci_high": 0.19413177498201978,
+      "share_of_churners": 0.9321926489226869,
+      "share_of_churned_balance": 0.6469783761373997
+    },
+    "1.0": {
+      "customers": 2067.0,
+      "churners": 107.0,
+      "total_balance": 222624657.0,
+      "churned_balance": 7931854.0,
+      "churn_rate": 0.05176584421867441,
+      "ci_low": 0.043018848106287116,
+      "ci_high": 0.062175809791257,
+      "share_of_churners": 0.06780735107731306,
+      "share_of_churned_balance": 0.35302162386260033
+    }
+  },
+  "table_inactivity": {
+    "<=15": {
+      "customers": 4614.0,
+      "churners": 488.0,
+      "total_balance": 155451469.0,
+      "churned_balance": 6317250.0,
+      "churn_rate": 0.10576506285218899,
+      "ci_low": 0.09721691698848997,
+      "ci_high": 0.11496911571929516,
+      "share_of_churners": 0.30925221799746516,
+      "share_of_churned_balance": 0.2811607290484686
+    },
+    "16-45": {
+      "customers": 3697.0,
+      "churners": 558.0,
+      "total_balance": 131249712.0,
+      "churned_balance": 7257490.0,
+      "churn_rate": 0.15093318907222072,
+      "ci_low": 0.13975632807467617,
+      "ci_high": 0.16283471001252184,
+      "share_of_churners": 0.35361216730038025,
+      "share_of_churned_balance": 0.3230078245220579
+    },
+    "46-90": {
+      "customers": 1338.0,
+      "churners": 361.0,
+      "total_balance": 43420400.0,
+      "churned_balance": 5729533.0,
+      "churn_rate": 0.26980568011958145,
+      "ci_low": 0.24670671270330188,
+      "ci_high": 0.29422266017403886,
+      "share_of_churners": 0.22877059569074779,
+      "share_of_churned_balance": 0.2550033124203189
+    },
+    "90+": {
+      "customers": 351.0,
+      "churners": 171.0,
+      "total_balance": 12332204.0,
+      "churned_balance": 3164192.0,
+      "churn_rate": 0.48717948717948717,
+      "ci_low": 0.43531153772121794,
+      "ci_high": 0.5393250224205669,
+      "share_of_churners": 0.10836501901140684,
+      "share_of_churned_balance": 0.14082813400915462
+    }
+  },
+  "table_balance_quintile": {
+    "Q1 lowest": {
+      "customers": 2001.0,
+      "churners": 443.0,
+      "total_balance": 3781210.0,
+      "churned_balance": 839473.0,
+      "churn_rate": 0.22138930534732634,
+      "ci_low": 0.2037414751157269,
+      "ci_high": 0.240104822508288,
+      "share_of_churners": 0.28073510773130544,
+      "share_of_churned_balance": 0.03736227641719183
+    },
+    "Q2": {
+      "customers": 1999.0,
+      "churners": 424.0,
+      "total_balance": 7014015.0,
+      "churned_balance": 1484037.0,
+      "churn_rate": 0.21210605302651325,
+      "ci_low": 0.19474633387861762,
+      "ci_high": 0.23057013591438952,
+      "share_of_churners": 0.26869455006337134,
+      "share_of_churned_balance": 0.06604977242548613
+    },
+    "Q3": {
+      "customers": 2000.0,
+      "churners": 369.0,
+      "total_balance": 15032331.0,
+      "churned_balance": 2676190.0,
+      "churn_rate": 0.1845,
+      "ci_low": 0.16811058609550195,
+      "ci_high": 0.2020990707389686,
+      "share_of_churners": 0.2338403041825095,
+      "share_of_churned_balance": 0.11910871525936463
+    },
+    "Q4": {
+      "customers": 2000.0,
+      "churners": 225.0,
+      "total_balance": 43967332.0,
+      "churned_balance": 4905239.0,
+      "churn_rate": 0.1125,
+      "ci_low": 0.09938800020119438,
+      "ci_high": 0.12709771144177665,
+      "share_of_churners": 0.14258555133079848,
+      "share_of_churned_balance": 0.2183166050729322
+    },
+    "Q5 highest": {
+      "customers": 2000.0,
+      "churners": 117.0,
+      "total_balance": 272658897.0,
+      "churned_balance": 12563526.0,
+      "churn_rate": 0.0585,
+      "ci_low": 0.049036041566208714,
+      "ci_high": 0.06965671118313763,
+      "share_of_churners": 0.0741444866920152,
+      "share_of_churned_balance": 0.5591626308250252
+    }
+  },
+  "table_tenure": {
+    "<1": {
+      "customers": 1613.0,
+      "churners": 453.0,
+      "total_balance": 49718519.0,
+      "churned_balance": 7595713.0,
+      "churn_rate": 0.28084314941103533,
+      "ci_low": 0.25945190865124756,
+      "ci_high": 0.30327578110277575,
+      "share_of_churners": 0.2870722433460076,
+      "share_of_churned_balance": 0.3380610557953113
+    },
+    "1-3": {
+      "customers": 2570.0,
+      "churners": 447.0,
+      "total_balance": 89745459.0,
+      "churned_balance": 5738487.0,
+      "churn_rate": 0.17392996108949416,
+      "ci_low": 0.1597647685971044,
+      "ci_high": 0.18906847276037805,
+      "share_of_churners": 0.2832699619771863,
+      "share_of_churned_balance": 0.2554018265155185
+    },
+    "3-7": {
+      "customers": 2966.0,
+      "churners": 423.0,
+      "total_balance": 102865829.0,
+      "churned_balance": 5241417.0,
+      "churn_rate": 0.1426163182737694,
+      "ci_low": 0.13049377446869678,
+      "ci_high": 0.15566340617695326,
+      "share_of_churners": 0.26806083650190116,
+      "share_of_churned_balance": 0.2332788198926807
+    },
+    "7-15": {
+      "customers": 2205.0,
+      "churners": 223.0,
+      "total_balance": 78447129.0,
+      "churned_balance": 2439839.0,
+      "churn_rate": 0.10113378684807256,
+      "ci_low": 0.08923469272206513,
+      "ci_high": 0.11442024005924259,
+      "share_of_churners": 0.14131812420785805,
+      "share_of_churned_balance": 0.10858948308217763
+    },
+    "15+": {
+      "customers": 646.0,
+      "churners": 32.0,
+      "total_balance": 21676849.0,
+      "churned_balance": 1453009.0,
+      "churn_rate": 0.04953560371517028,
+      "ci_low": 0.03530440650590584,
+      "ci_high": 0.06909253200862053,
+      "share_of_churners": 0.020278833967046894,
+      "share_of_churned_balance": 0.06466881471431181
+    }
+  },
+  "table_region": {
+    "East": {
+      "customers": 1930.0,
+      "churners": 316.0,
+      "total_balance": 68091263.0,
+      "churned_balance": 4661121.0,
+      "churn_rate": 0.16373056994818652,
+      "ci_low": 0.14789293831503322,
+      "ci_high": 0.1809041592549229,
+      "share_of_churners": 0.2002534854245881,
+      "share_of_churned_balance": 0.20745168839971934
+    },
+    "Metro": {
+      "customers": 2022.0,
+      "churners": 334.0,
+      "total_balance": 69938760.0,
+      "churned_balance": 4146841.0,
+      "churn_rate": 0.1651829871414441,
+      "ci_low": 0.14963490988084124,
+      "ci_high": 0.1820008436947589,
+      "share_of_churners": 0.21166032953105196,
+      "share_of_churned_balance": 0.1845627193490966
+    },
+    "North": {
+      "customers": 2165.0,
+      "churners": 312.0,
+      "total_balance": 70132031.0,
+      "churned_balance": 4088843.0,
+      "churn_rate": 0.1441108545034642,
+      "ci_low": 0.12994719738704724,
+      "ci_high": 0.15953521556999872,
+      "share_of_churners": 0.19771863117870722,
+      "share_of_churned_balance": 0.18198141261541453
+    },
+    "South": {
+      "customers": 2080.0,
+      "churners": 322.0,
+      "total_balance": 70456443.0,
+      "churned_balance": 5200973.0,
+      "churn_rate": 0.1548076923076923,
+      "ci_low": 0.139900350476277,
+      "ci_high": 0.17098772408354404,
+      "share_of_churners": 0.20405576679340937,
+      "share_of_churned_balance": 0.23147878593397458
+    },
+    "West": {
+      "customers": 1803.0,
+      "churners": 294.0,
+      "total_balance": 63835288.0,
+      "churned_balance": 4370687.0,
+      "churn_rate": 0.16306156405990016,
+      "ci_low": 0.1467290960216731,
+      "ci_high": 0.18082673679997496,
+      "share_of_churners": 0.18631178707224336,
+      "share_of_churned_balance": 0.19452539370179495
+    }
+  },
+  "table_gender": {
+    "Female": {
+      "customers": 4853.0,
+      "churners": 764.0,
+      "total_balance": 165689067.0,
+      "churned_balance": 9714750.0,
+      "churn_rate": 0.15742839480733567,
+      "ci_low": 0.14745302628081944,
+      "ci_high": 0.1679456689017583,
+      "share_of_churners": 0.4841571609632446,
+      "share_of_churned_balance": 0.43237266097172194
+    },
+    "Male": {
+      "customers": 5147.0,
+      "churners": 814.0,
+      "total_balance": 176764718.0,
+      "churned_balance": 12753715.0,
+      "churn_rate": 0.1581503788614727,
+      "ci_low": 0.14843743217866884,
+      "ci_high": 0.16837322329708931,
+      "share_of_churners": 0.5158428390367554,
+      "share_of_churned_balance": 0.5676273390282781
+    }
+  },
+  "table_age_band": {
+    "18-25": {
+      "customers": 1095.0,
+      "churners": 159.0,
+      "total_balance": 39627147.0,
+      "churned_balance": 2181169.0,
+      "churn_rate": 0.14520547945205478,
+      "ci_low": 0.12557826182231957,
+      "ci_high": 0.16731336165728855,
+      "share_of_churners": 0.10076045627376426,
+      "share_of_churned_balance": 0.09707690311732466
+    },
+    "26-35": {
+      "customers": 2116.0,
+      "churners": 302.0,
+      "total_balance": 68758586.0,
+      "churned_balance": 4321098.0,
+      "churn_rate": 0.14272211720226843,
+      "ci_low": 0.12846520792765764,
+      "ci_high": 0.15827390470336306,
+      "share_of_churners": 0.19138149556400508,
+      "share_of_churned_balance": 0.19231834484465227
+    },
+    "36-45": {
+      "customers": 2958.0,
+      "churners": 449.0,
+      "total_balance": 106600595.0,
+      "churned_balance": 6341057.0,
+      "churn_rate": 0.1517917511832319,
+      "ci_low": 0.13931310177935874,
+      "ci_high": 0.16517364113353739,
+      "share_of_churners": 0.28453738910012677,
+      "share_of_churned_balance": 0.2822203029891005
+    },
+    "46-55": {
+      "customers": 2436.0,
+      "churners": 402.0,
+      "total_balance": 78113980.0,
+      "churned_balance": 5578871.0,
+      "churn_rate": 0.16502463054187191,
+      "ci_low": 0.15081342218029536,
+      "ci_high": 0.18029065669340616,
+      "share_of_churners": 0.25475285171102663,
+      "share_of_churned_balance": 0.2482978254188704
+    },
+    "56-65": {
+      "customers": 1093.0,
+      "churners": 216.0,
+      "total_balance": 38910046.0,
+      "churned_balance": 3321653.0,
+      "churn_rate": 0.19762122598353157,
+      "ci_low": 0.1750906348797837,
+      "ci_high": 0.22226985447416875,
+      "share_of_churners": 0.13688212927756654,
+      "share_of_churned_balance": 0.1478362229017425
+    },
+    "65+": {
+      "customers": 302.0,
+      "churners": 50.0,
+      "total_balance": 10443431.0,
+      "churned_balance": 724617.0,
+      "churn_rate": 0.16556291390728478,
+      "ci_low": 0.12789621571339566,
+      "ci_high": 0.21163086874762027,
+      "share_of_churners": 0.031685678073510776,
+      "share_of_churned_balance": 0.032250400728309654
+    }
+  },
+  "table_low_engagement": {
+    "0.0": {
+      "customers": 7490.0,
+      "churners": 908.0,
+      "total_balance": 280444498.0,
+      "churned_balance": 15403547.0,
+      "churn_rate": 0.1212283044058745,
+      "ci_low": 0.11403006381197649,
+      "ci_high": 0.12881487343694722,
+      "share_of_churners": 0.5754119138149556,
+      "share_of_churned_balance": 0.6855629434409516
+    },
+    "1.0": {
+      "customers": 2510.0,
+      "churners": 670.0,
+      "total_balance": 62009287.0,
+      "churned_balance": 7064918.0,
+      "churn_rate": 0.26693227091633465,
+      "ci_low": 0.24999250036728157,
+      "ci_high": 0.28458435375585933,
+      "share_of_churners": 0.42458808618504434,
+      "share_of_churned_balance": 0.3144370565590484
+    }
+  },
+  "univariate_auc": {
+    "num_products": 0.7325,
+    "digital_engagement_score": 0.6588,
+    "last_transaction_days_ago": 0.6448,
+    "segment_rank": 0.6339,
+    "tenure_years": 0.6336,
+    "avg_monthly_balance": 0.6316,
+    "monthly_income": 0.6295,
+    "nps_score": 0.6228,
+    "relationship_manager_assigned": 0.5825,
+    "credit_score": 0.5811,
+    "complaint_count_last_year": 0.5752,
+    "branch_visits_last_year": 0.5678,
+    "age": 0.5336
+  },
+  "bh_adjusted_p": {
+    "MW_avg_monthly_balance": 1.1424120530923124e-61,
+    "MW_monthly_income": 8.401266023100468e-60,
+    "MW_num_products": 4.0605167122956774e-206,
+    "MW_tenure_years": 2.5978306228473424e-63,
+    "MW_age": 2.919224974860011e-05,
+    "MW_digital_engagement_score": 1.1346600714218725e-88,
+    "MW_branch_visits_last_year": 7.75432005689833e-18,
+    "MW_complaint_count_last_year": 3.6846328135517524e-32,
+    "MW_credit_score": 1.3966397730794931e-24,
+    "MW_nps_score": 6.675865225943582e-54,
+    "MW_last_transaction_days_ago": 4.333515946003744e-74,
+    "MW_relationship_manager_assigned": 1.4241833392876157e-49,
+    "MW_segment_rank": 1.877360658949565e-76,
+    "H1": 1.0564520521253197e-35,
+    "H2": 1.8431205938661555e-62,
+    "H3": 4.91005137883734e-232,
+    "H4": 1.7819389155449328e-95,
+    "H5": 1.7670072861718482e-66,
+    "H5_interaction": 0.13885224830519471,
+    "H6": 1.8431205938661555e-62,
+    "H7": 1.9396860043994165e-12,
+    "H8a": 0.9403751022754004,
+    "H8b": 0.6883247271819645,
+    "H9_region": 0.34430075208735755,
+    "H9_gender": 0.9766473967887607,
+    "H10_credit_score": 0.9791956559146432,
+    "H10_log_income": 0.31425733716393595,
+    "H10_age": 2.8223600003258758e-05,
+    "H11": 9.632002924916034e-307
+  },
+  "hypotheses": {
+    "H1_complaints_dose_response": {
+      "rates": {
+        "0": 0.13126696186259107,
+        "1": 0.2008080808080808,
+        "2": 0.31072210065645517,
+        "3+": 0.29850746268656714
+      },
+      "ca_z": 12.519656281168032,
+      "p": 5.8287009772431427e-36,
+      "ratio_2_vs_0": 2.3671005731184356,
+      "or_2plus_vs_lt2": [
+        2.547289072010488,
+        2.0987477891260817,
+        3.091691936497972
+      ],
+      "note": "3+ grouped (n=67); raw complaints=4 n=7, =5 n=1 not quoted",
+      "supported": true
+    },
+    "H2_low_balance": {
+      "spearman": -0.16624118188751907,
+      "p": 6.854193540250906e-63,
+      "or_per_log_unit": [
+        0.6890585336090638,
+        0.65936944178128,
+        0.720084421044447,
+        1.0777908073591316e-61
+      ],
+      "quintile_rates": {
+        "Q1 lowest": 0.22138930534732634,
+        "Q2": 0.21210605302651325,
+        "Q3": 0.1845,
+        "Q4": 0.1125,
+        "Q5 highest": 0.0585
+      },
+      "supported": true
+    },
+    "H3_single_product": {
+      "single_rate": 0.36068776865963265,
+      "multi_rate": 0.08802580298346996,
+      "odds_ratio": [
+        5.845086694413856,
+        5.2165757031334055,
+        6.54932285266985
+      ],
+      "chi2": 1063.1427674440097,
+      "p": 3.386242330232648e-233,
+      "cramers_v": 0.3260587013781429,
+      "share_of_customers": 0.2559,
+      "share_of_churners": 0.5849176172370089,
+      "supported": true
+    },
+    "H4_inactivity": {
+      "rates": {
+        "<=15": 0.10576506285218899,
+        "16-45": 0.15093318907222072,
+        "46-90": 0.26980568011958145,
+        "90+": 0.48717948717948717
+      },
+      "ca_z": 20.827123829155422,
+      "p": 2.4578467800619763e-96,
+      "univariate_auc": 0.6448,
+      "rank_among_fields": 3,
+      "ratio_90plus_vs_le15": 4.6062421185372004,
+      "supported": true,
+      "note": "strongest single *behavioural* field; see leakage caveat in train.py"
+    },
+    "H5_low_engagement": {
+      "low_rate": 0.26693227091633465,
+      "other_rate": 0.1212283044058745,
+      "p": 4.874502858405098e-67,
+      "cramers_v": 0.17297947239943867,
+      "by_segment": {
+        "Affluent": {
+          "0.0": 0.0462,
+          "1.0": 0.0809
+        },
+        "Mass Affluent": {
+          "0.0": 0.0882,
+          "1.0": 0.2263
+        },
+        "Mass Market": {
+          "0.0": 0.1723,
+          "1.0": 0.3288
+        },
+        "Private Banking": {
+          "0.0": 0.046,
+          "1.0": 0.0132
+        }
+      },
+      "interaction_lr_p": 0.11012419693170616,
+      "supported": true
+    },
+    "H6_early_tenure": {
+      "rates": {
+        "<1": 0.28084314941103533,
+        "1-3": 0.17392996108949416,
+        "3-7": 0.1426163182737694,
+        "7-15": 0.10113378684807256,
+        "15+": 0.04953560371517028
+      },
+      "ca_z": -16.737457238183833,
+      "p": 6.991147080181969e-63,
+      "supported": true
+    },
+    "H7_rm_confounding": {
+      "rm_share_by_segment": {
+        "Affluent": 0.814,
+        "Mass Affluent": 0.057,
+        "Mass Market": 0.057,
+        "Private Banking": 0.816
+      },
+      "median_balance_rm": 61101.0,
+      "median_balance_no_rm": 4922.0,
+      "churn_by_segment_rm": {
+        "Mass Market": {
+          "no_rm": 0.2244039270687237,
+          "rm": 0.10855263157894737,
+          "n_no_rm": 4991,
+          "n_rm": 304
+        },
+        "Mass Affluent": {
+          "no_rm": 0.12267080745341614,
+          "rm": 0.07006369426751592,
+          "n_no_rm": 2576,
+          "n_rm": 157
+        },
+        "Affluent": {
+          "no_rm": 0.10144927536231885,
+          "rm": 0.041425020712510356,
+          "n_no_rm": 276,
+          "n_rm": 1207
+        },
+        "Private Banking": {
+          "no_rm": 0.07777777777777778,
+          "rm": 0.03258145363408521,
+          "n_no_rm": 90,
+          "n_rm": 399
+        }
+      },
+      "crude_or": [
+        0.2398181162335775,
+        0.1958266831686413,
+        0.29369199305843874,
+        2.2220892074235572e-43
+      ],
+      "adjusted_or": [
+        0.38468711805798006,
+        0.2954066280552536,
+        0.5009507734270436,
+        1.3377144857927012e-12
+      ],
+      "supported": true,
+      "note": "association only; RM is assigned to wealthy customers, cannot claim RM causes retention"
+    },
+    "H8_interactions": {
+      "complaint_x_inactive": {
+        "complaint=0,inactive45=0": {
+          "rate": 0.10235678651298813,
+          "n": 5813
+        },
+        "complaint=0,inactive45=1": {
+          "rate": 0.2727272727272727,
+          "n": 1188
+        },
+        "complaint=1,inactive45=0": {
+          "rate": 0.18054443554843874,
+          "n": 2498
+        },
+        "complaint=1,inactive45=1": {
+          "rate": 0.4151696606786427,
+          "n": 501
+        }
+      },
+      "complaint_x_inactive_interaction_or": [
+        0.9797575946653553,
+        0.7585714653630574,
+        1.2654377183104508,
+        0.8755216469460625
+      ],
+      "complaint_x_negnps": {
+        "complaint=0,negNPS=0": {
+          "rate": 0.12320200125078173,
+          "n": 6396
+        },
+        "complaint=0,negNPS=1": {
+          "rate": 0.21652892561983472,
+          "n": 605
+        },
+        "complaint=1,negNPS=0": {
+          "rate": 0.19210292812777285,
+          "n": 2254
+        },
+        "complaint=1,negNPS=1": {
+          "rate": 0.30335570469798656,
+          "n": 745
+        }
+      },
+      "complaint_x_negnps_interaction_or": [
+        0.9310829829590075,
+        0.7037364372080613,
+        1.2318752807445408,
+        0.6171187209217612
+      ],
+      "note": "interaction OR on log-odds scale; ~1 means effects simply add on the log-odds scale"
+    },
+    "H9_region_gender_flat": {
+      "region": {
+        "chi2": 4.908542466616649,
+        "p": 0.2968109931787565,
+        "cramers_v": 0.02215523068400925,
+        "rates": {
+          "East": 0.1637,
+          "Metro": 0.1652,
+          "North": 0.1441,
+          "South": 0.1548,
+          "West": 0.1631
+        }
+      },
+      "gender": {
+        "chi2": 0.005117628282000589,
+        "p": 0.942969900347769,
+        "cramers_v": 0.0007153760047695609,
+        "rates": {
+          "Female": 0.1574,
+          "Male": 0.1582
+        }
+      }
+    },
+    "H10_weak_fields": {
+      "credit_score": {
+        "univariate_auc": 0.5811,
+        "adjusted": [
+          1.000012576147431,
+          0.9990677976046951,
+          1.0009582481295278,
+          0.9791956559146432
+        ]
+      },
+      "log_income": {
+        "univariate_auc": 0.6295,
+        "adjusted": [
+          0.8973071602723373,
+          0.7430944153656511,
+          1.0835233359677645,
+          0.2600750376529125
+        ]
+      },
+      "age": {
+        "univariate_auc": 0.5336,
+        "adjusted": [
+          1.0097919229440204,
+          1.005275006130071,
+          1.014329135236699,
+          2.0437779312704617e-05
+        ]
+      }
+    },
+    "H11_competitor_switch_proxy": {
+      "definition": "count of: low digital engagement, 46+ days inactive, single product, any complaint",
+      "rates": {
+        "0": {
+          "rate": 0.038860103626943004,
+          "n": 3474
+        },
+        "1": {
+          "rate": 0.12892768079800498,
+          "n": 4010
+        },
+        "2": {
+          "rate": 0.30539241857981847,
+          "n": 1873
+        },
+        "3": {
+          "rate": 0.5131348511383538,
+          "n": 571
+        },
+        "4": {
+          "rate": 0.8472222222222222,
+          "n": 72
+        }
+      },
+      "ca_z": 37.52717049795874,
+      "p": 3.321380318936563e-308,
+      "limitation": "no competitor field in data; this is a risk *profile*, not confirmed switching"
+    }
+  },
+  "volume_vs_value": {
+    "mass_market_share_of_churners": 0.7306717363751585,
+    "mass_market_share_of_churned_balance": 0.18824850740804946,
+    "top_quintile_balance_share_of_churners": 0.0741444866920152,
+    "top_quintile_balance_share_of_churned_balance": 0.5591626308250252,
+    "n_high_balance_leavers": 117,
+    "median_balance_churned": 4065.5,
+    "median_balance_stayed": 8417.5
+  },
+  "vif_top": {
+    "segment_rank": 12.81,
+    "log_balance": 10.33,
+    "last_transaction_days_ago": 5.89,
+    "log_income": 5.63,
+    "num_products": 4.62,
+    "log_days_inactive": 3.36,
+    "balance_to_income": 2.94,
+    "inactive_45plus": 2.88
+  },
+  "clustering": {
+    "k": 5,
+    "selection": [
+      {
+        "k": 2,
+        "inertia": 78484.0494,
+        "silhouette": 0.2749,
+        "gmm_bic": 120022.4428,
+        "bootstrap_ari": NaN
+      },
+      {
+        "k": 3,
+        "inertia": 70271.5548,
+        "silhouette": 0.1446,
+        "gmm_bic": 46408.7139,
+        "bootstrap_ari": NaN
+      },
+      {
+        "k": 4,
+        "inertia": 64745.6514,
+        "silhouette": 0.1438,
+        "gmm_bic": 46786.2928,
+        "bootstrap_ari": NaN
+      },
+      {
+        "k": 5,
+        "inertia": 60743.3198,
+        "silhouette": 0.1439,
+        "gmm_bic": 21583.1717,
+        "bootstrap_ari": 0.923
+      },
+      {
+        "k": 6,
+        "inertia": 57623.7248,
+        "silhouette": 0.1272,
+        "gmm_bic": -2158.2427,
+        "bootstrap_ari": NaN
+      },
+      {
+        "k": 7,
+        "inertia": 55437.89,
+        "silhouette": 0.1139,
+        "gmm_bic": 2718.0591,
+        "bootstrap_ari": NaN
+      },
+      {
+        "k": 8,
+        "inertia": 53583.5976,
+        "silhouette": 0.1067,
+        "gmm_bic": 4023.6473,
+        "bootstrap_ari": NaN
+      }
+    ],
+    "bootstrap_ari_mean": 0.9229911925558051,
+    "bootstrap_ari_sd": 0.04437785842625822,
+    "ari_kmeans_vs_gmm": 0.32976031564890945,
+    "ari_kmeans_vs_rules": 0.16011400114853702,
+    "profiles": [
+      {
+        "cluster": 0,
+        "avg_monthly_balance": 12372.115,
+        "segment_rank": 0.463,
+        "num_products": 2.062,
+        "digital_engagement_score": 56.409,
+        "branch_visits_last_year": 3.506,
+        "complaints_grp": 1.306,
+        "tenure_years": 4.464,
+        "last_transaction_days_ago": 23.831,
+        "nps_score": 5.89,
+        "relationship_manager_assigned": 0.046,
+        "median_balance": 5926.0,
+        "size": 1632,
+        "churn_rate": 0.249,
+        "share_churned_balance": 0.179,
+        "persona": "Disgruntled Unhappy Mass Market",
+        "play": "Complaint recovery: 48-hour resolution SLA + proactive follow-up call"
+      },
+      {
+        "cluster": 1,
+        "avg_monthly_balance": 10343.6,
+        "segment_rank": 0.377,
+        "num_products": 1.98,
+        "digital_engagement_score": 65.534,
+        "branch_visits_last_year": 2.485,
+        "complaints_grp": 0.085,
+        "tenure_years": 3.808,
+        "last_transaction_days_ago": 16.706,
+        "nps_score": 33.746,
+        "relationship_manager_assigned": 0.039,
+        "median_balance": 4929.5,
+        "size": 2922,
+        "churn_rate": 0.105,
+        "share_churned_balance": 0.114,
+        "persona": "Digital Mass Market",
+        "play": "Monitor; light-touch loyalty"
+      },
+      {
+        "cluster": 2,
+        "avg_monthly_balance": 135133.636,
+        "segment_rank": 2.197,
+        "num_products": 3.532,
+        "digital_engagement_score": 59.161,
+        "branch_visits_last_year": 3.503,
+        "complaints_grp": 0.314,
+        "tenure_years": 5.158,
+        "last_transaction_days_ago": 24.053,
+        "nps_score": 32.49,
+        "relationship_manager_assigned": 0.869,
+        "median_balance": 79189.0,
+        "size": 1919,
+        "churn_rate": 0.04,
+        "share_churned_balance": 0.441,
+        "persona": "Multi-Product Wealthy",
+        "play": "P2 nurture & deepen: protect relationship, wealth cross-sell"
+      },
+      {
+        "cluster": 3,
+        "avg_monthly_balance": 12690.497,
+        "segment_rank": 0.455,
+        "num_products": 2.476,
+        "digital_engagement_score": 55.196,
+        "branch_visits_last_year": 3.528,
+        "complaints_grp": 0.231,
+        "tenure_years": 17.22,
+        "last_transaction_days_ago": 24.12,
+        "nps_score": 26.573,
+        "relationship_manager_assigned": 0.076,
+        "median_balance": 5552.0,
+        "size": 925,
+        "churn_rate": 0.051,
+        "share_churned_balance": 0.021,
+        "persona": "Veteran Mass Market",
+        "play": "Monitor; light-touch loyalty"
+      },
+      {
+        "cluster": 4,
+        "avg_monthly_balance": 8062.389,
+        "segment_rank": 0.258,
+        "num_products": 1.701,
+        "digital_engagement_score": 37.788,
+        "branch_visits_last_year": 5.408,
+        "complaints_grp": 0.152,
+        "tenure_years": 3.989,
+        "last_transaction_days_ago": 38.87,
+        "nps_score": 23.819,
+        "relationship_manager_assigned": 0.053,
+        "median_balance": 3789.0,
+        "size": 2602,
+        "churn_rate": 0.284,
+        "share_churned_balance": 0.245,
+        "persona": "Low-Digital Branch-Reliant Mass Market",
+        "play": "P3 low-cost automation: second-product bundle + re-engagement nudge"
+      }
+    ],
+    "note": "churned not used as a clustering input; used only to evaluate clusters"
+  }
+}

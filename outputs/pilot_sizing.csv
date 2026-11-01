@@ -1,0 +1,4 @@
+group,customers,baseline_pred_churn,n_per_arm_for_4pp,n_per_arm_for_20pct_relative,mde_with_available_n
+P1+P2 (high value),2106,0.05508600438717814,304,6076,0.024474791461871623
+P1+P3 (high risk),2106,0.3146036855968656,2037,803,0.05517562899733045
+Top 40% risk (all values),3369,0.24737054470771971,1721,1107,0.04041804511633197

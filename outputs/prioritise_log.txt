@@ -1,0 +1,32 @@
+﻿[PASS] ranked list contains only active customers
+[PASS] ranked list size == active customers
+[PASS] probabilities are out-of-fold
+[PASS] all tiers populated
+               customers  mean_prob  ...  positive_net  share_balance_at_risk
+priority_tier                        ...                                     
+P1                   118   0.273781  ...            86               0.117433
+P2                  1988   0.042112  ...          1029               0.510409
+P3                  1988   0.317030  ...          1988               0.211266
+P4                  4328   0.074653  ...          4328               0.160892
+
+[4 rows x 9 columns]
+      Probability only  Balance only  Probability x balance (RetainIQ)
+100              0.027         0.062                             0.167
+250              0.053         0.195                             0.297
+500              0.090         0.283                             0.359
+1000             0.152         0.402                             0.486
+2000             0.268         0.559                             0.675
+                     scenario  jaccard_top250  n_positive_net_value  total_net_value_top250  p1_jaccard_vs_base  p1_size
+0        value horizon 1 year        0.623377                6460.0            16996.184186                 NaN      NaN
+1       value horizon 5 years        0.901141                7809.0           123071.483674                 NaN      NaN
+2          NIM halved (1.25%)        0.706485                6931.0            31318.141189                 NaN      NaN
+3            NIM +50% (3.75%)        0.886792                7724.0           107773.426358                 NaN      NaN
+4           fee per product 0        0.908397                7275.0            65575.836876                 NaN      NaN
+5         fee per product 100        0.945525                7512.0            72549.393423                 NaN      NaN
+6               save rate 10%        0.766784                6867.0            29403.350551                 NaN      NaN
+7               save rate 30%        0.923077                7747.0           109462.602831                 NaN      NaN
+8        flat contact cost 10        0.760563                6179.0            80092.565919                 NaN      NaN
+9        flat contact cost 50        0.760563                1578.0            70092.565919                 NaN      NaN
+10  balance winsorised at p99        0.968504                7430.0            63986.985801                 NaN      NaN
+11   high-risk cut at top 30%             NaN                   NaN                     NaN            0.723926    163.0
+12   high-risk cut at top 20%             NaN                   NaN                     NaN            0.652542     77.0

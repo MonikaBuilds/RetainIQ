@@ -1,0 +1,59 @@
+﻿Overall churn 15.8% | churned balance share 6.6%
+                           customers  churn_rate
+complaint_count_last_year                       
+0.0                             7001    0.131267
+1.0                             2475    0.200808
+2.0                              457    0.310722
+3.0                               59    0.271186
+4.0                                7    0.428571
+5.0                                1    1.000000
+                          feature       auc           direction
+2                    num_products  0.732528   lower->more churn
+5        digital_engagement_score  0.658788   lower->more churn
+10      last_transaction_days_ago  0.644778  higher->more churn
+12                   segment_rank  0.633935   lower->more churn
+3                    tenure_years  0.633550   lower->more churn
+0             avg_monthly_balance  0.631640   lower->more churn
+1                  monthly_income  0.629545   lower->more churn
+9                       nps_score  0.622771   lower->more churn
+11  relationship_manager_assigned  0.582458   lower->more churn
+8                    credit_score  0.581141   lower->more churn
+7       complaint_count_last_year  0.575164  higher->more churn
+6         branch_visits_last_year  0.567795  higher->more churn
+4                             age  0.533583  higher->more churn
+                                        persona  ...  share_churned_balance
+cluster                                          ...                       
+0               Disgruntled Unhappy Mass Market  ...               0.178853
+1                           Digital Mass Market  ...               0.114162
+2                         Multi-Product Wealthy  ...               0.440577
+3                           Veteran Mass Market  ...               0.021034
+4        Low-Digital Branch-Reliant Mass Market  ...               0.245374
+
+[5 rows x 8 columns]
+{
+  "overall": {
+    "customers": 10000,
+    "churners": 1578,
+    "churn_rate": 0.1578,
+    "churn_rate_ci": [
+      0.15078645301943353,
+      0.16507635546545754
+    ],
+    "churned_balance_share": 0.06561021073252264,
+    "total_balance": 342453785.0,
+    "churned_balance": 22468465.0,
+    "accuracy_of_predict_nobody": 0.8422000000000001,
+    "churned_balance_share_winsor99": 0.06885534201597289
+  },
+  "volume_vs_value": {
+    "mass_market_share_of_churners": 0.7306717363751585,
+    "mass_market_share_of_churned_balance": 0.18824850740804946,
+    "top_quintile_balance_share_of_churners": 0.0741444866920152,
+    "top_quintile_balance_share_of_churned_balance": 0.5591626308250252,
+    "n_high_balance_leavers": 117,
+    "median_balance_churned": 4065.5,
+    "median_balance_stayed": 8417.5
+  }
+}
+
+PASS: all EDA on real rows only (n=10000)
